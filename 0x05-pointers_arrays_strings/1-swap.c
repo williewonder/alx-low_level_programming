@@ -7,9 +7,11 @@
  * @b : integer
  * Return: 0
  */
-void swap_int(int *a, int *b) {
-  int temp = *a;
-  *a = *b;
-  *b = temp;
+void swap_int(int *a, int *b)
+{
+int c;
+c = *a;
+*a = *b;
+*b = c;
 }
 
