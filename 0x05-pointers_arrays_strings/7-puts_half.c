@@ -4,29 +4,19 @@
  * @str: string character
  * Return: the second half of the string
  */
-void puts_half(char *str)
-{
-	int count = 0;
-	int i;
+void puts_half(char *str) {
+  int length = strlen(str);  // Get the length of the string
+  int half = length / 2;  // Calculate the half of the length
 
-	for (i = 0; str[i] != '\0'; i++)
-	{
-		if (( count - 1) / 2)
-		{
-			_putchar(str[i]);
-		}
-		else
-		{
-			i = count % 2 == 1;
-			_putchar(i);
-		}
-		_putchar('\n');
-	}
+  // Check if the length of the string is odd
+  if (length % 2 != 0) {
+    half = (length - 1) / 2;  // Adjust the half value for odd length strings
+  }
+
+  // Print the second half of the string
+  for (int i = half; i < length; i++) {
+    putchar(str[i]);
+  }
+
+  putchar('\n');  // Print a new line
 }
-Footer
-© 2022 GitHub, Inc.
-Footer navigation
-Terms
-Privacy
-Security
-
